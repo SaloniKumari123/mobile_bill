@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="mobilebill.css">
+	<script type="text/javascript">
+    	function result()
+
+    	{
+
+
+    	var data= non.input.value;
+    
+    switch(true){
+        case (data<=1024):
+             non.output.value=data/10;
+            break;
+        case (data<=2048):
+             non.output.value=(data-1024)/10+90;
+            break;
+        case (data<=3072):
+             non.output.value=(data-2048)/7+150;
+            break;
+        case (data<=4096):
+            non.output.value=(data-3072)/5+250;
+            break;
+        case (data<=5120):
+            non.output.value=(data-4404)/10+300;
+            break;
+        case (data>5120):
+            alert("This is not available")
+
+        }
+    }
+    
+
+    </script>
+</head>
+<body>
+    <h1>Mobile Billing Website</h1>
+
+    <form id="non">
+	<label>
+		Enter data in Megabits:
+		<input type="text" id="input" name="in Megabytes" placeholder="in Megabytes" required>
+	</label>
+	<p><input type="button" id="btn" value="Your bill is" OnClick="result()"></p>
+	<div>Total bill amount in rupees : 
+   <input type="text" id="output" value= " " readonly="true">
+    </div>
+    
+</form>
+</body>
+</html>
+l
